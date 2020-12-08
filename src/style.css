@@ -1,1 +1,68 @@
+body {
+  font-family: "Noticia Text", serif;
+  color: #ffffff;
+}
+h1 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  color: #180705;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+small {
+  color: #4d18df;
+  font-weight: bold;
+}
+hr {
+  border: 0.5px solid #91169c;
+  border-radius: 20px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
 
+.weather-app {
+  background-image: url("https://eyeonmontreal.files.wordpress.com/2015/04/sunset-quotes-21-1586531574.jpg?w=593&h=395");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 600px;
+  margin: 30px auto 5px;
+  padding: 20px;
+  border: 2px double #dadde1;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px #4d18df;
+}
+.spaceing {
+  margin-bottom: 5px;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  font-size: 64px;
+  width: 64px;
+}
+.weather-temperature strong {
+  color: rgb(61, 118, 192);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+.open-source a {
+  color: #180705;
+}
