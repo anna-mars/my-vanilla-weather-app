@@ -63,6 +63,13 @@ hr {
   font-size: 16px;
   top: -34px;
 }
+.present-temperature .main-max,
+.present-temperature .main-min {
+  font-size: 13px;
+  display: inline;
+  margin: 0 8px 0 0;
+}
+
 .open-source a {
   color: #180705;
 }
