@@ -18,13 +18,18 @@
       <div class="weather-app">
         <div class="spaceing">
           <h1>
-            San Francisco
+            <span id="city">
+              <!--San Francisco-->
+            </span>,
+            <span id="country">
+              <!--NL-->
+            </span>
           </h1>
           <div class="row">
             <div class="col-6">
               <ul>
-                <li>
-                  Sun 7:00
+                <li id="date">
+                  <!--Sun 7:00-->
                 </li>
                 <li>
                   28.12.2020
@@ -43,17 +48,17 @@
                   Split
                 </li>
               </ul>
+              <hr />
             </div>
           </div>
         </div>
-        <hr />
         <div class="row">
           <div class="col-6">
             <div class="clearfix weather-temperature">
               <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="Rain" class="float-left" />
               <div class=" float-left">
-                <strong>
-                  28
+                <strong id="temperature">
+                  <!--28-->
                 </strong>
                 <span class="units">
                   °C |
@@ -61,30 +66,41 @@
                 </span>
               </div>
             </div>
+            <div class="present-temp">
+              <ul class="present-temperature">
+                <li class="main-max">
+                  Max : <span id="max-temp">28</span>°
+                </li>
+                <li class="main-min">
+                  Min : <span id="min-temp">23</span>°
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="col-6">
             <ul>
               <li>
-                Sky: Rain
+                Sky: <span id="sky">
+                  <!-- Rain-->
+                </span>
               </li>
               <li>
-                Humidity:93%
+                Humidity: <span id="humidity">
+                  <!--93-->
+                </span> %
               </li>
               <li>
-                Wind:43km/h
+                Wind: <span id="wind">
+                  <!--43-->
+                </span> km/h
+              </li>
+              <li>
+                Air pressure: <span id="pressure">
+                  <!--1007-->
+                </span> hPa
               </li>
             </ul>
           </div>
-        </div>
-        <div class="present-temp">
-          <ul class="present-temperature">
-            <li class="main-max">
-              MAX : <span id="max-temp">28</span>°
-            </li>
-            <li class="main-min">
-              MIN : <span id="min-temp">23</span>°
-            </li>
-          </ul>
         </div>
       </div>
       <small class="open-source">
