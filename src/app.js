@@ -1,18 +1,17 @@
 function formatDate(presentTime) {
-  let date = new Date(presentTime);
-  let hours = date.getHours();
+  let dateTime = new Date(presentTime);
+  let hours = dateTime.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = dateTime.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = days[date.getDay()];
+  let day = days[dateTime.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-
 function displayTemperature(response) {
   console.log(response);
   let temperatureElement = document.querySelector("#temperature");
