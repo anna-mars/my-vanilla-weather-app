@@ -1,5 +1,5 @@
-function formatDate(presentTime) {
-  let dateTime = new Date(presentTime);
+function formatDate() {
+  let dateTime = new Date();
   let hours = dateTime.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -10,8 +10,20 @@ function formatDate(presentTime) {
   }
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[dateTime.getDay()];
-  return `${day} ${hours}:${minutes}`;
+
+  let year = dateTime.getFullYear();
+
+  let date = dateTime.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+  let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  let month = months[dateTime.getMonth()];
+
+  document.querySelector("#date").innerHTML = `${day} ${hours}:${minutes}`;
+  document.querySelector("#time").innerHTML = `${date}.${month}.${year}`;
 }
+formatDate();
 function displayTemperature(response) {
   console.log(response);
   let temperatureElement = document.querySelector("#temperature");
@@ -23,7 +35,8 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let pressureElement = document.querySelector("#pressure");
-  let dateElement = document.querySelector("#date");
+  //let dateElement = document.querySelector("#date");
+  let mainIconElement = document.querySelector("#main-icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   temperatureMaxElement.innerHTML = Math.round(response.data.main.temp_max);
@@ -34,9 +47,14 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   pressureElement.innerHTML = response.data.main.pressure;
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  //dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  mainIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  mainIconElement.setAttribute("alt", response.data.weather[0].description);
 }
 let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
-let city = "amsterdam";
+let city = "Amsterdam";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
