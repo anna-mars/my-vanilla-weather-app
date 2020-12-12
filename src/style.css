@@ -33,6 +33,14 @@ hr {
   border-radius: 14px;
   margin: 5px 15px 5px -25px;
 }
+
+button#current-location-button {
+  margin: 0 0 0 -80px;
+  padding: 6px 15px;
+}
+input#city-input {
+  border-radius: 30px;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -90,4 +98,12 @@ hr {
 }
 .open-source a {
   color: #180705;
+}
+.btn-info {
+  margin: 0;
+  display: block;
+  padding: 6px 10px;
+  border: 1px solid #0b4d74;
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
