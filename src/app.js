@@ -104,6 +104,19 @@ function displayCelsiusTemp(event) {
   let temperatureMinElement = document.querySelector("#min-temp");
   temperatureMinElement.innerHTML = Math.round(celsiusMinTemperature);
 }
+function searchLocation(position) {
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celsiusTemperature = null;
 let celsiusMaxTemperature = null;
@@ -118,4 +131,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-search("Amsterdam");
+search("Stalowa wola");
