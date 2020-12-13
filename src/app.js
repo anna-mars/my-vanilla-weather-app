@@ -91,6 +91,7 @@ function displayFahrenheitTemp(event) {
   );
   temperatureMinElement.innerHTML = Math.round(fahrenheitMinTemperature);
 }
+
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -104,6 +105,7 @@ function displayCelsiusTemp(event) {
   let temperatureMinElement = document.querySelector("#min-temp");
   temperatureMinElement.innerHTML = Math.round(celsiusMinTemperature);
 }
+
 function searchLocation(position) {
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
@@ -111,13 +113,34 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
+function searchCityAntwerp(antwerp) {
+  let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
+  let city = "Antwerp";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  search(antwerp);
+}
+function searchCityKrakow(krakow) {
+  let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
+  let city = "Krakow";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  search(krakow);
+}
+
+function searchCityBenidorm(benidorm) {
+  let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
+  let city = "Benidorm";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  search(benidorm);
+}
 let celsiusTemperature = null;
 let celsiusMaxTemperature = null;
 let celsiusMinTemperature = null;
@@ -131,4 +154,16 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-search("Stalowa wola");
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let buttonAmsterdam = document.querySelector("#city-antwerp");
+buttonAmsterdam.addEventListener("click", searchCityAntwerp);
+
+let buttonKrakow = document.querySelector("#city-krakow");
+buttonKrakow.addEventListener("click", searchCityKrakow);
+
+let buttonBenidorm = document.querySelector("#city-benidorm");
+buttonBenidorm.addEventListener("click", searchCityBenidorm);
+
+search("Amsterdam");

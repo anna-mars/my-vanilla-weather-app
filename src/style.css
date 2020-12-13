@@ -31,28 +31,53 @@ small {
 hr {
   border: 0.5px solid #3188bb;
   border-radius: 14px;
-  margin: 5px 15px 5px -25px;
+  margin: 10px -5px 0 -15px;
+}
+span .capital-cities-map {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+  padding: 0 15px 0 5px;
+}
+button#city-antwerp,
+button#city-krakow,
+button#city-benidorm {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 200;
+  border: 1px solid #214c64;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background: #4f9fad;
+  transition: all 150ms ease-in-out;
+}
+button#city-antwerp:hover,
+button#city-krakow:hover,
+button#city-benidorm:hover {
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 button#current-location-button {
-  margin: 0 0 0 -80px;
+  margin: 0 0 0 -60px;
   padding: 6px 15px;
 }
 input#city-input {
   border-radius: 30px;
 }
 .weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 500px;
+  margin: 20px auto;
 }
 
 .weather-app {
   background-image: url("https://eyeonmontreal.files.wordpress.com/2015/04/sunset-quotes-21-1586531574.jpg?w=593&h=395");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  max-width: 600px;
-  margin: 30px auto 5px;
-  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto 5px;
+  padding: 15px;
   border: 2px double #dadde1;
   border-radius: 5px;
   box-shadow: 2px 3px 3px #3188bb;
