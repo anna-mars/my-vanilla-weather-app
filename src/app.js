@@ -29,6 +29,7 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperatureMaxElement = document.querySelector("#max-temp");
   let temperatureMinElement = document.querySelector("#min-temp");
+  let temperatureFeelsElement = document.querySelector("#feels-temp");
   let cityElement = document.querySelector("#city");
   let countryElement = document.querySelector("#country");
   let skyElement = document.querySelector("#sky");
@@ -41,10 +42,12 @@ function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   celsiusMaxTemperature = response.data.main.temp_max;
   celsiusMinTemperature = response.data.main.temp_min;
+  celsiusFeelsTemperature = response.data.main.feels_like;
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   temperatureMaxElement.innerHTML = Math.round(response.data.main.temp_max);
   temperatureMinElement.innerHTML = Math.round(response.data.main.temp_min);
+  temperatureFeelsElement.innerHTML = Math.round(response.data.main.feels_like);
   cityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
   skyElement.innerHTML = response.data.weather[0].main;
@@ -90,6 +93,12 @@ function displayFahrenheitTemp(event) {
     (celsiusMinTemperature * 9) / 5 + 32
   );
   temperatureMinElement.innerHTML = Math.round(fahrenheitMinTemperature);
+
+  let temperatureFeelsElement = document.querySelector("#feels-temp");
+  let fahrenheitFeelsTemperature = Math.round(
+    (celsiusFeelsTemperature * 9) / 5 + 32
+  );
+  temperatureFeelsElement.innerHTML = Math.round(fahrenheitFeelsTemperature);
 }
 
 function displayCelsiusTemp(event) {
@@ -104,6 +113,9 @@ function displayCelsiusTemp(event) {
 
   let temperatureMinElement = document.querySelector("#min-temp");
   temperatureMinElement.innerHTML = Math.round(celsiusMinTemperature);
+
+  let temperatureFeelsElement = document.querySelector("#feels-temp");
+  temperatureFeelsElement.innerHTML = Math.round(celsiusFeelsTemperature);
 }
 
 function searchLocation(position) {
@@ -144,6 +156,7 @@ function searchCityBenidorm(benidorm) {
 let celsiusTemperature = null;
 let celsiusMaxTemperature = null;
 let celsiusMinTemperature = null;
+let celsiusFeelsTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);

@@ -84,7 +84,7 @@ input#city-input {
 }
 .weather-temperature strong {
   color: #0b4d74;
-  font-size: 64px;
+  font-size: 56px;
   line-height: 1;
   font-weight: 400;
 }
@@ -104,6 +104,9 @@ input#city-input {
 .present-temperature .main-min {
   font-size: 13px;
   display: inline;
+}
+.present-temperature .feels-like {
+  font-size: 13px;
 }
 .present-temperature .main-max {
   margin-right: 0;
