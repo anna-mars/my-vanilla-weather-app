@@ -82,7 +82,9 @@ input#city-input {
 .spaceing {
   margin-bottom: 5px;
 }
-
+.col-6 {
+  padding-right: 4px;
+}
 .weather-temperature img {
   margin-right: 5px;
   margin-bottom: 5px;
