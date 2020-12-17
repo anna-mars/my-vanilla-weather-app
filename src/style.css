@@ -10,7 +10,27 @@ h1 {
   margin-bottom: 0;
   margin-top: 7px;
 }
-
+h5 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #15141b;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: center;
+}
+.weather-forecast img {
+  display: block;
+  margin-top: -15px;
+  width: 50px;
+}
+.forecast-bottom-temp {
+  color: #15141b;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  margin-top: -5px;
+  text-align: center;
+}
 ul,
 li {
   margin: 0;
@@ -61,7 +81,15 @@ input#city-input {
   font-family: "Lobster", cursive;
   color: #0b4d74;
   font-size: 24px;
-  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1;
+}
+.title-bottom {
+  font-family: "Lobster", cursive;
+  color: #0b4d74;
+  font-size: 19px;
+  text-align: center;
+  margin-bottom: 0;
   line-height: 1;
 }
 .weather-app-wrapper {
@@ -79,11 +107,25 @@ input#city-input {
   border-radius: 5px;
   box-shadow: 2px 3px 3px #3188bb;
 }
+.weather-app-bottom {
+  background-image: url("https://eyeonmontreal.files.wordpress.com/2015/04/sunset-quotes-21-1586531574.jpg?w=593&h=395");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 500px;
+  margin: 0 auto 5px;
+  padding: 15px;
+  border: 2px double #dadde1;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px #3188bb;
+}
 .spaceing {
   margin-bottom: 5px;
 }
 .col-6 {
   padding-right: 4px;
+}
+.col-5 {
+  text-align: center;
 }
 .weather-temperature img {
   margin-right: 5px;

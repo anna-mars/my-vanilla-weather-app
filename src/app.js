@@ -153,6 +153,7 @@ function searchCityBenidorm(benidorm) {
   axios.get(apiUrl).then(displayTemperature);
   search(benidorm);
 }
+
 let celsiusTemperature = null;
 let celsiusMaxTemperature = null;
 let celsiusMinTemperature = null;
