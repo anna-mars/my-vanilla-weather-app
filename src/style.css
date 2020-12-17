@@ -12,17 +12,16 @@ h1 {
 }
 h5 {
   font-size: 15px;
-  font-weight: bold;
-  color: #15141b;
   font-weight: 500;
+  color: #15141b;
   margin-top: 15px;
   margin-bottom: 0;
   text-align: center;
 }
 .weather-forecast img {
   display: block;
-  margin: 0 auto;
-  width: 40px;
+  margin: 0 0;
+  width: 100%;
 }
 .forecast-bottom-temp {
   color: #15141b;
@@ -121,6 +120,10 @@ input#city-input {
 }
 .spaceing {
   margin-bottom: 5px;
+}
+.col-2 {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .col-6 {
   padding-right: 4px;
