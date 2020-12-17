@@ -24,7 +24,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 small {
-  color: #3188bb;
+  color: #0b4d74;
   font-weight: bold;
 }
 .capital-cities-map {
@@ -38,7 +38,7 @@ button#city-antwerp,
 button#city-krakow,
 button#city-benidorm {
   font-size: 13px;
-  color: #ffffff;
+  color: #180705;
   font-weight: 200;
   border: 1px solid #6a8c9e;
   border-radius: 25px;
@@ -56,6 +56,13 @@ button#city-benidorm:hover {
 
 input#city-input {
   border-radius: 30px;
+}
+.title {
+  font-family: "Lobster", cursive;
+  color: #0b4d74;
+  font-size: 24px;
+  margin-bottom: 15px;
+  line-height: 1;
 }
 .weather-app-wrapper {
   max-width: 500px;
@@ -75,8 +82,11 @@ input#city-input {
 .spaceing {
   margin-bottom: 5px;
 }
-.col-6 {
-  padding-right: 4px;
+.col-5,
+.col-6,
+.col-7 {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .weather-temperature img {
   margin-right: 5px;
@@ -94,7 +104,7 @@ input#city-input {
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
-  top: -34px;
+  top: -26px;
 }
 .weather-temperature .active {
   color: #0b4d74;
