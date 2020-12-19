@@ -29,6 +29,14 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
+hr {
+  border: 0.1px dotted #0b4d74;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin: 10px 0 10px 0;
+}
+
 small {
   color: #0b4d74;
   font-weight: bold;
