@@ -14,7 +14,6 @@ h5 {
   font-size: 15px;
   font-weight: 500;
   color: #15141b;
-  margin-top: 15px;
   margin-bottom: 0;
   text-align: center;
 }
@@ -34,25 +33,7 @@ small {
   color: #0b4d74;
   font-weight: bold;
 }
-button#city-antwerp,
-button#city-krakow,
-button#city-benidorm {
-  font-size: 13px;
-  color: #180705;
-  font-weight: 200;
-  border: 1px solid #6a8c9e;
-  border-radius: 25px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  background: #4f9fad;
-  transition: all 150ms ease-in-out;
-}
-button#city-antwerp:hover,
-button#city-krakow:hover,
-button#city-benidorm:hover {
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 0.7;
-}
+
 input#city-input {
   border-radius: 30px;
   line-height: 1;
@@ -88,23 +69,42 @@ input#city-input {
 .title {
   font-family: "Lobster", cursive;
   color: #0b4d74;
-  font-size: 24px;
-  text-align: center;
+  font-size: 30px;
   line-height: 1;
+  margin: 0 auto;
 }
 .title-bottom {
   font-family: "Lobster", cursive;
   color: #0b4d74;
   font-size: 19px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   line-height: 1;
+}
+.capital-cities .title {
+  display: block;
+  margin: 0 0 10px;
+  text-align: center;
 }
 .capital-cities-map {
   display: block;
   margin: 0 0 10px;
   text-align: center;
-  padding: 0 0 0 20px;
+}
+.city-button {
+  font-size: 13px;
+  color: #180705;
+  font-weight: 200;
+  border: 1px solid #6a8c9e;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background: #4f9fad;
+  transition: all 150ms ease-in-out;
+}
+.city-button:hover {
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.7;
 }
 .btn-info {
   margin: 0 5px;
@@ -124,7 +124,6 @@ input#city-input {
   padding-right: 4px;
 }
 .col-5 {
-  text-align: center;
 }
 .weather-temperature img {
   margin-right: 5px;

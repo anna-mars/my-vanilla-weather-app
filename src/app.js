@@ -31,7 +31,19 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[dateTime.getDay()];
   day = day.slice(0, 3);
+
   return `${day}`;
+}
+function formatMonth(timestamp) {
+  let dateTime = new Date(timestamp);
+
+  let date = dateTime.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+  let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  let month = months[dateTime.getMonth()];
+  return `${date}/${month}`;
 }
 function displayTemperature(response) {
   let lon = response.data.coord.lon;
@@ -88,6 +100,9 @@ function displayForecast(response) {
   <div class=col-2>
             <h5>
              ${formatDay(forecast.dt * 1000)}
+            </h5>
+            <h5>
+             ${formatMonth(forecast.dt * 1000)}
             </h5>
             <img src="https://openweathermap.org/img/wn/${
               forecast.weather[0].icon
@@ -196,6 +211,14 @@ function searchCityBenidorm(benidorm) {
   search(benidorm);
 }
 
+function searchCityAmsterdam(amsterdam) {
+  let apiKey = "58a0b6e26263101abdfda8d9e9d3a0f0";
+  let city = "Amsterdam";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  search(amsterdam);
+}
+
 let celsiusTemperature = null;
 let celsiusMaxTemperature = null;
 let celsiusMinTemperature = null;
@@ -213,8 +236,8 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let buttonAmsterdam = document.querySelector("#city-antwerp");
-buttonAmsterdam.addEventListener("click", searchCityAntwerp);
+let buttonAntwerp = document.querySelector("#city-antwerp");
+buttonAntwerp.addEventListener("click", searchCityAntwerp);
 
 let buttonKrakow = document.querySelector("#city-krakow");
 buttonKrakow.addEventListener("click", searchCityKrakow);
@@ -222,4 +245,7 @@ buttonKrakow.addEventListener("click", searchCityKrakow);
 let buttonBenidorm = document.querySelector("#city-benidorm");
 buttonBenidorm.addEventListener("click", searchCityBenidorm);
 
-search("Amsterdam");
+let buttonAmsterdam = document.querySelector("#city-amsterdam");
+buttonAmsterdam.addEventListener("click", searchCityAmsterdam);
+
+search("Stalowa Wola");
