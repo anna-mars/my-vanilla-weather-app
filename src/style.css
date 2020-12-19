@@ -128,15 +128,15 @@ input#city-input {
 }
 .weather-temperature img {
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   font-size: 16px;
-  width: 56px;
+  width: 80px;
   display: block;
 }
 .weather-temperature strong {
   color: #0b4d74;
   font-size: 56px;
-  line-height: 1;
+  line-height: 1.3;
   font-weight: 400;
 }
 .weather-temperature .units {
@@ -168,7 +168,7 @@ input#city-input {
 .open-source a {
   color: #180705;
 }
-.weather-forecast img {
+.weather-forecast #forecast-icon {
   display: block;
   margin: 0 0;
   width: 100%;
