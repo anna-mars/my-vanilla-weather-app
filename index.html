@@ -28,20 +28,21 @@
           </span>
         </div>
         <hr />
-        <div class="row">
-          <div class="col-6">
-            <form id="search-form">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-6">
+
               <input type="text" placeholder="Search for a city" class="form-control" id="city-input"
                 autocomplete="off" />
-            </form>
+            </div>
+            <div class="col-6">
+              <input type="submit" value="🔍" class="btn btn-info" />
+              <button class="btn btn-info" id="current-location-button">
+                📍
+              </button>
+            </div>
           </div>
-          <div class="col-6">
-            <input type="submit" value="🔍" class="btn btn-info" />
-            <button class="btn btn-info" id="current-location-button">
-              📍
-            </button>
-          </div>
-        </div>
+        </form>
         <div class="spaceing">
           <h1>
             <span id="city">
